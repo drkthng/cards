@@ -14,9 +14,15 @@ layout: default
                   <div class="panel-body">
                     <h3 class="panel-title pull-left">{{ post.title | truncate: 25 }}</h3><span class="post-meta pull-right"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span>
                   </div>
-                  {% if post.img %}
+                {% if post.img %}
                   <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
-                  {% else %}
+                {% elsif post.type == "youtube" %}
+                    {% if post.yt-video-id %}
+                <div class="video_container">
+                    <iframe src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                </div>
+                    {% endif %}
+                {% else %}
                   <img width="100%" src="{{site.baseurl}}/images/webjeda-logo-big.jpg" alt="{{site.title}}">
                   {% endif %}
                   <div class="panel-body"><small>
