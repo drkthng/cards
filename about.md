@@ -3,8 +3,8 @@ layout: page
 title: About
 permalink: /about/
 ---
-![webjeda logo]({{site.baseurl}}/images/webjeda.svg)
+![webjeda logo]({{site.baseurl}}/images/icon_smaller.png)
 
 <div class="mt50"></div>
 
-Webjeda cards is a Bootstrap based theme. Any Bootstrap element can be used in the theme. Read [Webjeda Blog](http://blog.webjeda.com){: target="_blank"} for jekyll tutorials. 
+Sauwntrax - Free Copyright Music - is a platform for finding and presenting free music on the web. It originated in finding free music that you can use in your youtube videos without getting a copyright strike. Find out more on [Sauwntrax](http://sauwntrax.com){: target="_blank"}. 
