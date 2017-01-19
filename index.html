@@ -23,7 +23,7 @@ layout: default
                 </div>
                     {% endif %}
                 {% else %}
-                  <img width="100%" src="{{site.baseurl}}/images/webjeda-logo-big.jpg" alt="{{site.title}}">
+                  <img width="100%" src="{{site.baseurl}}/images/{{site.default-image}}" alt="{{site.title}}">
                   {% endif %}
                   <div class="panel-body"><small>
                     {{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</small>
