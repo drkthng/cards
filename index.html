@@ -18,17 +18,23 @@ layout: default
                   <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
                 {% elsif post.type == "youtube" %}
                     {% if post.yt-video-id %}
-                <div class="video_container">
-                    <iframe src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-                </div>
+                    <div class="video_container">
+                        <div class="iframe_container">
+                            <iframe width="400" height="250" src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
                     {% endif %}
                 {% else %}
                   <img width="100%" src="{{site.baseurl}}/images/{{site.default-image}}" alt="{{site.title}}">
                   {% endif %}
-                  <div class="panel-body"><small>
+                  <div class="panel-body excerpt"><small>
                     {{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</small>
-                    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary btn-sm pull-right mt10">Read</a>
+                      
                   </div>
+                    <div class="panel-body">
+                        <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary">Read More</a>
+                     </div>
+
                 </div>
             </div>
         

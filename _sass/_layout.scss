@@ -33,16 +33,36 @@ img {
     box-shadow: 0px 0px 6px $grey-color;
 }
 
-.panel .video_container{
-    width: 267px;
-    height: 150px;
-    margin: 0 auto;
+.panel .excerpt {
+//    +1 for padding
+    height: 5.8em;
+    line-height: 1.2em;
+    overflow: hidden;
 }
 
-.video_container iframe {
-    display: block;
+.panel .video_container {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-width: 400;
+    max-height: 250;
+}
+
+.panel .iframe_container{
+//    width: 350px;
+//    height: 225px;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.iframe_container iframe {
+    position: absolute;
+    vertical-align: middle;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 
